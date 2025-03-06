@@ -1,0 +1,156 @@
+@use "sass:color";  // Importa el módulo de color
+
+// Definimos la paleta de colores inspirada en la Amazonia colombiana
+$verde-selva: #2E7D32;
+$verde-musgo: #6D9F71;
+$azul-rio: #0288D1;
+$naranja-atardecer: #F57C00;
+$amarillo-guacamaya: #FBC02D;
+$gris-oscuro: #424242;
+$blanco: #FFFFFF;
+
+.hero {
+    background: url("../imagenes/fondou.jpg") no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.btn-opcion {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    background: $verde-selva;
+    color: $blanco;
+    &:hover {
+        transform: scale(1.05);
+        background: $verde-musgo;
+    }
+}
+
+.scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    background-color: $gris-oscuro;
+    border-radius: 10px;
+}
+
+.grid-container {
+    display: flex;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $blanco;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    text-align: center;
+}
+
+.campo img {
+    width: 100%;
+    height: 120px;
+    border-radius: 5px;
+}
+
+.campo a {
+    margin-top: 10px;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+    background: $naranja-atardecer;
+    color: $blanco;
+    border-radius: 5px;
+    &:hover {
+        background: color.adjust($naranja-atardecer, $lightness: -10%);
+    }
+}
+
+.seccion-noticias {
+    padding: 50px 20px;
+    background: color.adjust($gris-oscuro, $lightness: 30%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px; // Espacio entre noticias
+}
+.noticia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background: $blanco;
+    padding: 15px;
+    margin-bottom: 100px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.noticia a {
+    margin-top: auto;
+    background: $azul-rio;
+    color: $blanco;
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+    &:hover {
+        background: color.adjust($azul-rio, $lightness: -10%);
+    }
+}
+
+.noticia img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  
+
+  
+  .noticia p {
+    flex-grow: 1;
+ 
+  }
+
+  .noticia h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+.footer {
+    background: $verde-selva;
+    padding: 20px;
+    text-align: center;
+    color: $blanco;
+    a {
+        text-decoration: none;
+        color: $amarillo-guacamaya;
+        &:hover {
+            color: color.adjust($amarillo-guacamaya, $lightness: -10%);
+        }
+    }
+}
